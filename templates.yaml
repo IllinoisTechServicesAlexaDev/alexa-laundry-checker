@@ -1,0 +1,12 @@
+welcome: 'Welcome to laundry rooms real-time checker. You can say "help" to know about how to use me.'
+help: 'My main function is helping check the available laundry machines in all buildings. For example, you can say, general search, to get all laundry rooms status. Or you can ask me about supported buildings, ask, what buildings are supported? Or say, interactive, to let me ask questions about your query.'
+general_search_answer: "The current status is.\n{% for item in info %}\n  {{ item.building }} room {{ item.room }} have {{ item.washers }} washers and {{ item.dryers }} dryers available.\n{% endfor %}"
+ask-building: 'which building''s machine do you want to check now ?'
+ask-machine: 'Ok. Which kind of machine in {{ building }} do you want to know? Washers or Dryers?'
+answer-supported-building: "We support these buildings.\n{% for item in results %}\n  {{ item }}.\n {% endfor %}"
+answer-entress: 'Now in {{ building }} {{ room }} has {{ numbers }} {{ machine }} available.'
+reprompt_general: 'Any other information do you want?'
+error-not-found: 'I am sorry to tell you that there is no information about that yet. You can ask another one now, or  say "stop" or "cancel" to end this session.'
+error-not-understand: 'I am sorry that I couldn''t understand you. Could you say it again?'
+error-other: 'I am sorry to tell you that something has gone wrong. Please try again.'
+goodbye: Goodbye.
