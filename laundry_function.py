@@ -87,18 +87,5 @@ def answer_machine(machine_name):
     help_msg = render_template('reprompt_general')
     return question(answer_msg).reprompt(help_msg)
 
-'''
-@ask.intent('DetailIntent')
-def detail() :
-    try:
-        building_id = session.attributes['building_id']
-        building_name = session.attributes['building_name']
-        machine = session.attributes['machine_name']
-
-    except KeyError:
-        err_msg = render_template('error-other')
-        help_msg = render_template('reprompt_general') 
-        return statement(err_msg).reprompt(help_msg)
-'''
 if __name__ == '__main__':
     app.run(debug=True)
