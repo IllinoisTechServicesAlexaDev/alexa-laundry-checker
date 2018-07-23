@@ -38,12 +38,6 @@ def stop():
 
 @ask.intent('InteractiveIntent')
 def interactive():
-    if 'building_id' in session.attributes.keys():
-        session.attributes.pop('building_id')
-    if 'building_name' in session.attributes.keys():
-        session.attributes.pop('building_name')
-    if 'machine' in session.attributes.keys():
-        session.attributes.pop('machine')
     ask_building_msg = render_template('ask-building')
     return question(ask_building_msg)
 
