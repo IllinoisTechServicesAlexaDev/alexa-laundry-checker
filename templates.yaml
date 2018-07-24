@@ -9,7 +9,7 @@ help: |
   Or say, "interactive", and I will ask you questions to help narrow down your query.
 
 general_search_answer: |
-  The current status is.\n{% for item in info %}\n  {{ item.building }} room {{ item.room }} has {{ item.washers }} washers and {{ item.dryers }} dryers available.\n{% endfor %}
+  The current status is. {% for item in info %}  {{ item.building }} room {{ item.room }} has {{ item.washers }} washers and {{ item.dryers }} dryers available. {% endfor %}
 
 ask-building: |
   Which building's machines are you interested in now?
@@ -18,7 +18,7 @@ ask-machine: |
   Ok. Which type of machine in {{ building }} do you want to know about? Washers or Dryers?
 
 answer-supported-building: |
-  I have information for the laundry availability in these buildings.\n{% for item in results %}\n  {{ item }}.\n {% endfor %}
+  I have information for the laundry availability in these buildings. {% for item in results %}  {{ item }}.. {% endfor %}
 
 answer-entress: |
   Right now, {{ building }} {{ room }} has {{ numbers }} {{ machine }} available.
